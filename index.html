@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="auto">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>F24nT ai</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css" id="hljs-light"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css" id="hljs-dark" disabled/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+
+<!-- LOADING -->
+<div id="ls">
+    <div class="ls-svg">
+        <svg viewBox="0 0 100 100" fill="none">
+            <g class="lr1"><circle cx="50" cy="50" r="44" stroke="rgb(207,100,58)" stroke-width="6" stroke-linecap="round" stroke-dasharray="210 60" opacity=".9"/></g>
+            <g class="lr2"><circle cx="50" cy="50" r="32" stroke="rgb(195,85,40)" stroke-width="5" stroke-linecap="round" stroke-dasharray="140 60" opacity=".7"/></g>
+            <g class="lr3"><circle cx="50" cy="50" r="20" stroke="rgb(207,100,58)" stroke-width="4" stroke-linecap="round" stroke-dasharray="78 46" opacity=".85"/></g>
+            <circle class="lcore" cx="50" cy="50" r="9" fill="rgb(207,100,58)" opacity=".8"/>
+        </svg>
+    </div>
+    <div class="ls-txt">F24nT ai</div>
+</div>
+
+<!-- AUTH -->
+<div id="auth">
+    <div class="acard">
+        <div class="alogo">
+            <svg width="30" height="30" viewBox="0 0 100 100" fill="none">
+                <circle cx="50" cy="50" r="44" stroke="rgb(207,100,58)" stroke-width="7" stroke-linecap="round" stroke-dasharray="210 60"/>
+                <circle cx="50" cy="50" r="30" stroke="rgb(195,85,40)" stroke-width="5.5" stroke-linecap="round" stroke-dasharray="140 38" opacity=".7"/>
+                <circle cx="50" cy="50" r="16" stroke="rgb(207,100,58)" stroke-width="4" stroke-linecap="round" stroke-dasharray="78 18"/>
+                <circle cx="50" cy="50" r="7" fill="rgb(207,100,58)" opacity=".85"/>
+            </svg>
+            <span class="awm">F24nT ai</span>
+        </div>
+        <h1 id="ah">Welcome back</h1>
+        <p id="asub">Sign in to continue your conversations</p>
+        <div id="aerr"></div>
+        <button class="abtn" onclick="App.auth.loginGoogle()">
+            <svg class="aico" viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+            <span class="albl">Continue with Google</span>
+        </button>
+        <button class="abtn" onclick="App.auth.loginGithub()">
+            <svg class="aico" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            <span class="albl">Continue with GitHub</span>
+        </button>
+        <button class="abtn" onclick="App.auth.loginGuest()">
+            <svg class="aico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <span class="albl">Continue as Guest</span>
+        </button>
+        <div class="adiv"><span>or</span></div>
+        <input class="ainp" type="email" id="ae" placeholder="Email address"/>
+        <input class="ainp" type="password" id="ap" placeholder="Password"/>
+        <button class="asub-btn" id="asb" onclick="App.auth.loginEmail()">Sign in</button>
+        <div class="atgl"><span id="atgt">Don't have an account?</span><a id="atgl" onclick="App.auth.toggleMode()"> Sign up</a></div>
+        <div class="anote">Guest sessions are temporary and not saved</div>
+    </div>
+</div>
+
+<!-- APP -->
+<div id="app">
+    <!-- SIDEBAR -->
+    <nav id="sb">
+        <div id="sb-top">
+            <div id="sb-logo" onclick="App.ui.newChat()">
+                <svg width="24" height="24" viewBox="0 0 100 100" fill="none">
+                    <circle cx="50" cy="50" r="44" stroke="rgb(207,100,58)" stroke-width="7" stroke-linecap="round" stroke-dasharray="210 60"/>
+                    <circle cx="50" cy="50" r="30" stroke="rgb(195,85,40)" stroke-width="5.5" stroke-linecap="round" stroke-dasharray="140 38" opacity=".7"/>
+                    <circle cx="50" cy="50" r="16" stroke="rgb(207,100,58)" stroke-width="4" stroke-linecap="round" stroke-dasharray="78 18"/>
+                    <circle cx="50" cy="50" r="7" fill="rgb(207,100,58)" opacity=".85"/>
+                </svg>
+                <span class="sb-wm">F24nT ai</span>
+            </div>
+            <button class="ib-btn" onclick="App.ui.newChat()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg>
+            </button>
+        </div>
+        <div id="sb-sw">
+            <span class="sb-si-ic"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></span>
+            <input id="sb-si" placeholder="Search conversations…" oninput="App.ui.searchChats(this.value)"/>
+        </div>
+        <div id="sb-nav">
+            <div class="ni act" id="n-chats" onclick="App.ui.showChats()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Chats
+            </div>
+            <div class="ni" id="n-star" onclick="App.ui.showStarred()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Starred
+            </div>
+            <div class="ni" id="n-proj" onclick="App.ui.showProjects()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>Projects
+            </div>
+            <div class="ni" id="n-tools" onclick="App.ui.showTools()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Tools
+            </div>
+            <div class="ni" id="n-incog" onclick="App.ui.toggleIncog()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5.5 5 9.5V18a1.5 1.5 0 0 0 2.6 1l.9-1 1.4 1.4a1.5 1.5 0 0 0 2.2 0L13.5 18l1.4 1.4a1.5 1.5 0 0 0 2.2 0l.9-1A1.5 1.5 0 0 0 20.6 18V9.5C19 5.5 16 2 12 2z"/><circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/></svg>
+                Incognito <span class="ibadge" id="incog-badge">ON</span>
+            </div>
+            <div class="ni" onclick="App.ui.openUpgrade()" style="color:rgb(139,92,246)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgb(139,92,246)" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Abyz Plan
+            </div>
+        </div>
+        <div id="sb-hist"><div id="no-hist">No conversations yet.<br>Start a new chat!</div></div>
+        <div id="sb-bot">
+            <button class="sb-btn" onclick="App.ui.openSettings()">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 0-14.14 0M4.93 19.07a10 10 0 0 0 14.14 0M1 12h2m18 0h2"/></svg>Settings
+            </button>
+            <div id="ub" onclick="App.ui.openProfile()">
+                <div class="uav" id="uav">U<div class="abyz-ring"></div></div>
+                <span class="unm" id="unm">User</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:rgb(var(--tx4));margin-left:auto"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div id="main">
+        <div id="tb">
+            <button id="mob-tog" onclick="App.ui.toggleSidebar()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <div id="mw">
+                <button id="mb" onclick="App.ui.toggleModelDropdown()">
+                    <div class="mdot" id="mdot"></div>
+                    <span id="mnm">F24nT ai</span>
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </button>
+                <div class="dov" id="mddov" onclick="App.ui.closeModelDropdown()"></div>
+                <div class="dd" id="mdd"></div>
+            </div>
+            <div class="tsp"></div>
+            <div class="tacts">
+                <div id="incog-tb-pill">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8 2 5 5.5 5 9.5V18a1.5 1.5 0 0 0 2.6 1l.9-1 1.4 1.4a1.5 1.5 0 0 0 2.2 0L13.5 18l1.4 1.4a1.5 1.5 0 0 0 2.2 0l.9-1A1.5 1.5 0 0 0 20.6 18V9.5C19 5.5 16 2 12 2z"/><circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/><circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/></svg>Incognito
+                </div>
+                <div id="usage-pill">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <span id="usage-txt">0/100</span>
+                </div>
+                <button class="tbtn" onclick="App.ui.toggleTheme()">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+                </button>
+                <button class="tbtn out" onclick="App.ui.openShare()" id="share-btn" style="display:none">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>Share
+                </button>
+            </div>
+        </div>
+        <div id="ca">
+            <div id="wlc">
+                <div id="wt">
+                    <svg id="wlogo" width="52" height="52" viewBox="0 0 100 100" fill="none">
+                        <circle cx="50" cy="50" r="44" stroke="rgb(207,100,58)" stroke-width="6" stroke-linecap="round" stroke-dasharray="210 60"/>
+                        <circle cx="50" cy="50" r="32" stroke="rgb(195,85,40)" stroke-width="5" stroke-linecap="round" stroke-dasharray="140 60" opacity=".7"/>
+                        <circle cx="50" cy="50" r="20" stroke="rgb(207,100,58)" stroke-width="4" stroke-linecap="round" stroke-dasharray="78 46" opacity=".85"/>
+                        <circle cx="50" cy="50" r="9" fill="rgb(207,100,58)" opacity=".8"/>
+                    </svg>
+                    <h1 id="wh">How can I help you?</h1>
+                </div>
+                <div id="pills">
+                    <button class="pill" onclick="App.ui.usePill(this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Write code</button>
+                    <button class="pill" onclick="App.ui.usePill(this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Summarize text</button>
+                    <button class="pill" onclick="App.ui.usePill(this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Research topic</button>
+                    <button class="pill" onclick="App.ui.usePill(this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>Help me write</button>
+                    <button class="pill" onclick="App.ui.usePill(this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Explain concept</button>
+                    <button class="pill" onclick="App.ui.usePill(this)"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Analyze data</button>
+                </div>
+            </div>
+            <div id="msgs"></div>
+        </div>
+        <div id="io">
+            <div id="iw">
+                <div id="ibox">
+                    <div id="ap"></div>
+                    <textarea id="ita" rows="1" placeholder="Message F24nT ai…" oninput="App.ui.onInput(this)"></textarea>
+                    <div id="ibar">
+                        <button class="ibb" onclick="App.upload.triggerFile()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>Attach
+                        </button>
+                        <input type="file" id="fi" style="display:none" multiple accept="image/*,video/*,.txt,.md,.csv,.json,.pdf,.docx,.py,.js,.html,.css,.cpp,.java" onchange="App.upload.handleFiles(this)"/>
+                        <button class="ibb" onclick="App.ui.insertCode()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Code
+                        </button>
+                        <button class="ibb" onclick="App.terminal.open()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>Terminal
+                        </button>
+                        <div class="isp"></div>
+                        <button id="send" onclick="App.ai.sendMessage()" disabled>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="hint">F24nT ai v10 · Powered by YoeNw24</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- TERMINAL MODAL -->
+<div class="mbg" id="terminal-modal">
+    <div class="mc" style="max-width:700px">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+            <div style="width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,rgb(20,184,166),rgb(13,148,136));display:flex;align-items:center;justify-content:center;flex-shrink:0">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+            </div>
+            <div><div class="mt" style="margin-bottom:0">Terminal</div><div style="font-size:12px;color:rgb(var(--tx4))">Jalankan kode Python, JS, HTML, dll</div></div>
+            <button class="ib-btn" style="margin-left:auto" onclick="App.terminal.close()"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+        <div style="display:flex;gap:6px;margin-bottom:8px;flex-wrap:wrap">
+            <button class="ibb" style="border:1px solid rgba(var(--br1),.6);font-size:12px" onclick="App.terminal.run('python')">🐍 Python</button>
+            <button class="ibb" style="border:1px solid rgba(var(--br1),.6);font-size:12px" onclick="App.terminal.run('javascript')">📜 JavaScript</button>
+            <button class="ibb" style="border:1px solid rgba(var(--br1),.6);font-size:12px" onclick="App.terminal.run('html')">🌐 HTML Preview</button>
+            <button class="ibb" style="border:1px solid rgba(var(--br1),.6);font-size:12px" onclick="App.terminal.run('bash')">💻 Bash</button>
+        </div>
+        <textarea id="terminal-input" style="width:100%;padding:10px;border:1px solid rgba(var(--br1),.8);border-radius:8px;background:rgb(var(--bg1));color:rgb(var(--tx0));font-size:13px;font-family:monospace;min-height:80px;resize:vertical;outline:none" placeholder="Tulis kode di sini..."></textarea>
+        <div style="display:flex;gap:8px;margin:8px 0 4px">
+            <button class="bprim" style="flex:1" onclick="App.terminal.execute()">▶️ Jalankan</button>
+            <button class="bcanc" onclick="App.terminal.clear()">🗑️ Clear</button>
+        </div>
+        <div id="terminal-output" style="background:rgb(20,20,30);border-radius:8px;padding:12px;font-family:monospace;font-size:12px;color:#00ff88;min-height:100px;max-height:300px;overflow-y:auto;white-space:pre-wrap;border:1px solid rgba(var(--br1),.6)"></div>
+    </div>
+</div>
+
+<!-- UPGRADE MODAL -->
+<div class="mbg" id="upgrade-modal">
+    <div class="mc" style="max-width:420px">
+        <div class="mt">⚡ Upgrade Plan</div>
+        <div class="md" style="margin-bottom:12px">Masukkan kode aktivasi dari admin.</div>
+        <input class="minp" type="text" id="upgrade-code" placeholder="Kode aktivasi..." style="margin-bottom:12px"/>
+        <div class="mrow">
+            <button class="bcanc" onclick="App.ui.closeUpgrade()">Batal</button>
+            <button class="babyz" onclick="App.ui.activatePlan()">Aktifkan ⚡</button>
+        </div>
+    </div>
+</div>
+
+<!-- SHARE MODAL -->
+<div class="mbg" id="share-modal">
+    <div class="mc">
+        <div class="mt">Share conversation</div>
+        <div class="md">Anyone with this link can view a snapshot.</div>
+        <div class="mlnk"><span class="murl" id="share-url">https://f24nt.ai/share/…</span><button class="mcp" onclick="App.ui.copyShareLink()">Copy</button></div>
+        <button class="mcl" onclick="App.ui.closeShare()">Close</button>
+    </div>
+</div>
+
+<!-- CONFIRM CLEAR -->
+<div class="mbg" id="cm">
+    <div class="mc">
+        <div class="mt">Clear all conversations?</div>
+        <div class="md">This will permanently delete all your conversation history. Cannot be undone.</div>
+        <div class="mrow"><button class="bcanc" onclick="App.ui.closeModal('cm')">Cancel</button><button class="bdang" onclick="App.ui.clearAll()">Delete all</button></div>
+    </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast-wrap"></div>
+
+<script src="js/utils.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/upload.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/terminal.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
